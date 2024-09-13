@@ -11,12 +11,20 @@ config_version=5
 [application]
 
 config/name="CultureJam2024"
+run/main_scene="res://levels_game_scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 EventBus="*res://common/event_bus.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
 
 [file_customization]
 
@@ -25,3 +33,12 @@ folder_colors={
 "res://entities/": "red",
 "res://levels_game_scenes/": "purple"
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
