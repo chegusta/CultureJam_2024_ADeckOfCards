@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://3b2btvkyqn3x"]
+
+[ext_resource type="Texture2D" uid="uid://bejls3evu302p" path="res://pictures/trialimage.png" id="1_x38ia"]
+[ext_resource type="Script" path="res://levels_game_scenes/texture_rect.gd" id="2_kj2qi"]
+
+[node name="Puzzle_mechanic" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 360.0
+offset_bottom = 329.0
+texture = ExtResource("1_x38ia")
+expand_mode = 1
+script = ExtResource("2_kj2qi")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
