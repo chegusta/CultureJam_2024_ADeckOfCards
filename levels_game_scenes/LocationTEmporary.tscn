@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://chjq8waf0125r"]
+
+[ext_resource type="Script" path="res://levels_game_scenes/location_t_emporary.gd" id="1_bny4q"]
+[ext_resource type="Texture2D" uid="uid://dw5a1g0ul5ec" path="res://assets/GUI/02_BG.png" id="1_hdj2q"]
+[ext_resource type="Texture2D" uid="uid://dbcy166pp0bh5" path="res://assets/GUI/02_frame1.png" id="2_kondj"]
+[ext_resource type="Texture2D" uid="uid://3skbdoumqu8f" path="res://assets/GUI/02_Depending on where you are, you will be distributed random artp.png" id="3_olc78"]
+[ext_resource type="Texture2D" uid="uid://j7nmw3l522p0" path="res://assets/GUI/02_icon1.png" id="4_giax8"]
+[ext_resource type="Texture2D" uid="uid://ccl3d54extcup" path="res://assets/GUI/02_Where are you_.png" id="5_jd8rg"]
+
+[node name="LocationTemporary" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bny4q")
+
+[node name="02Bg" type="Sprite2D" parent="."]
+position = Vector2(360, 640)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("1_hdj2q")
+
+[node name="02Frame1" type="Sprite2D" parent="."]
+position = Vector2(365, 1009)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("2_kondj")
+
+[node name="02DependingOnWhereYouAre,YouWillBeDistributedRandomArtp" type="Sprite2D" parent="."]
+position = Vector2(360, 1097)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("3_olc78")
+
+[node name="02Icon1" type="Sprite2D" parent="."]
+position = Vector2(587, 1007)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("4_giax8")
+
+[node name="02WhereAreYou" type="Sprite2D" parent="."]
+position = Vector2(366, 918)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("5_jd8rg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+fill_mode = 4

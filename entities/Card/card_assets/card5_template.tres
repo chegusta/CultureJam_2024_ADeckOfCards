@@ -8,7 +8,9 @@
 script = ExtResource("1_8gd04")
 art_name = "WIR WASSER"
 artist_name = "KÜNSTLER:IN"
-description_text = "This is the text for card 5. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+description_text = "I can hear some sprinkling water..."
 location_data = Vector2(0, 0)
 mystery_picture = ExtResource("2_x0jio")
 final_picture = ExtResource("1_jw8o5")
+distance = "900m"
+minutes = "9 Min"

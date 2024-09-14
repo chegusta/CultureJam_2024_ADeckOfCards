@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://oxwuywwu17bc"]
+[gd_scene load_steps=9 format=3 uid="uid://oxwuywwu17bc"]
 
 [ext_resource type="Script" path="res://levels_game_scenes/deck_of_arts.gd" id="1_5o0ex"]
+[ext_resource type="Texture2D" uid="uid://cdsyjjw2304gj" path="res://assets/GUI/deck_of_arts/04_preview pop up grid.png" id="2_y3twu"]
 [ext_resource type="Script" path="res://levels_game_scenes/grid_view.gd" id="3_a0ghx"]
-
-[sub_resource type="Gradient" id="Gradient_6a058"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_8j74t"]
-gradient = SubResource("Gradient_6a058")
+[ext_resource type="Texture2D" uid="uid://0h37hbi7j064" path="res://assets/GUI/deck_of_arts/03_BG.png" id="4_0wvoe"]
+[ext_resource type="Texture2D" uid="uid://bxci0j3xhee25" path="res://assets/GUI/deck_of_arts/03_Grid icon.png" id="4_mw1v4"]
+[ext_resource type="Texture2D" uid="uid://bwd017qtrn448" path="res://assets/GUI/deck_of_arts/03_X icon.png" id="4_rsv7c"]
+[ext_resource type="Texture2D" uid="uid://kb5e4k5f4tct" path="res://assets/GUI/deck_of_arts/03_new route.png" id="6_fkf3p"]
+[ext_resource type="Texture2D" uid="uid://c38ed2328w23g" path="res://assets/GUI/deck_of_arts/03_Text myDeck.png" id="7_cebgb"]
 
 [node name="DeckOfArts" type="Control"]
 layout_mode = 3
@@ -24,12 +25,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -720.0
-offset_right = -720.0
+offset_left = -899.585
+offset_right = -539.585
+offset_bottom = 640.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.666, 0.666)
 mouse_filter = 0
-texture = SubResource("GradientTexture1D_8j74t")
+texture = ExtResource("2_y3twu")
 script = ExtResource("3_a0ghx")
 
 [node name="DeckView" type="Button" parent="GridView"]
@@ -46,20 +49,59 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 46
 text = "DECK VIEW"
 
+[node name="TextureRect" type="TextureRect" parent="GridView"]
+self_modulate = Color(0, 0, 0, 1)
+z_index = -5
+layout_mode = 0
+offset_left = 21.8994
+offset_right = 1101.9
+offset_bottom = 1920.0
+mouse_filter = 2
+texture = ExtResource("2_y3twu")
+
 [node name="BackToMain" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 599.0
+offset_top = 64.0
+offset_right = 671.0
+offset_bottom = 136.0
+scale = Vector2(0.666, 0.666)
 theme_override_font_sizes/font_size = 36
-text = "BACK TO MAIN MENU"
+icon = ExtResource("4_rsv7c")
 
 [node name="GridButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -85.0
-offset_right = 293.0
+offset_left = 35.0
+offset_top = -130.0
+offset_right = 167.0
+offset_bottom = -45.0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 56
-text = "GRID VIEW"
+icon = ExtResource("4_mw1v4")
+
+[node name="NewRoute" type="Button" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 1160.0
+offset_right = 797.0
+offset_bottom = 1233.0
+scale = Vector2(0.666, 0.666)
+icon = ExtResource("6_fkf3p")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -20
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.666, 0.666)
+mouse_filter = 2
+texture = ExtResource("4_0wvoe")
+
+[node name="03TextMyDeck" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(277, 166)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("7_cebgb")

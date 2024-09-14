@@ -8,7 +8,7 @@ func _ready() -> void:
 	deck_of_arts.pressed.connect(start_deck_of_arts)
 
 func start_main_game():
-	SceneManager.change_scene("res://levels_game_scenes/main.tscn", { "pattern": "squares", "color": Color("da3831") })
+	SceneManager.change_scene("res://levels_game_scenes/LocationTEmporary.tscn", { "pattern": "squares", "color": Color("da3831") })
 
 func start_deck_of_arts():
 	SceneManager.change_scene("res://levels_game_scenes/deck_of_arts.tscn", { "pattern": "scribbles", "color": Color("da3831") })

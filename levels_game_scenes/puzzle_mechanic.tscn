@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3b2btvkyqn3x"]
 
-[ext_resource type="Texture2D" uid="uid://bejls3evu302p" path="res://pictures/trialimage.png" id="1_x38ia"]
+[ext_resource type="Texture2D" uid="uid://bejls3evu302p" path="res://assets/GUI/pictures/trialimage.png" id="1_x38ia"]
 [ext_resource type="Script" path="res://levels_game_scenes/texture_rect.gd" id="2_kj2qi"]
 
 [node name="Puzzle_mechanic" type="Node2D"]

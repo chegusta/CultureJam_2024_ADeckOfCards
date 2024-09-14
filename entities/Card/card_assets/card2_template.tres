@@ -8,7 +8,9 @@
 script = ExtResource("3_wnmuy")
 art_name = "HOME STORIES"
 artist_name = "Künstler:in"
-description_text = "This is the text for card 2. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+description_text = "It looks like someone left something..."
 location_data = Vector2(0, 0)
 mystery_picture = ExtResource("2_efuh6")
 final_picture = ExtResource("1_3hivh")
+distance = "100m"
+minutes = "1 Min"

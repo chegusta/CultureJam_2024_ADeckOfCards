@@ -7,3 +7,6 @@ class_name CardTemplate
 @export var location_data : Vector2
 @export var mystery_picture : Texture2D
 @export var final_picture: Texture2D
+
+@export var distance : String
+@export var minutes : String

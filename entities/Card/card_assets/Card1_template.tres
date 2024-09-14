@@ -8,7 +8,9 @@
 script = ExtResource("1_5g38e")
 art_name = "Skulptur Elefant"
 artist_name = "Unknown"
-description_text = "This is the text for card 1. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+description_text = "Something big is being presented small..."
 location_data = Vector2(0, 0)
 mystery_picture = ExtResource("2_ptfxb")
 final_picture = ExtResource("1_wg2ur")
+distance = "700"
+minutes = "7 Min"

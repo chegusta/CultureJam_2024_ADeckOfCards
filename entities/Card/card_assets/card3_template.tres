@@ -8,7 +8,9 @@
 script = ExtResource("3_rw484")
 art_name = "B-GIRLS"
 artist_name = "Künstlerin"
-description_text = "B-Girls, GO! Is an installation that was made by Maruša Sagadin in the year 2018 and bought in the year 2023 by the Christine König Galerie.The sculpture made out of steal, wood and laquer represents an oversized pink baseball cap that references Hip-Hop and street-Culture."
+description_text = "This could protect me from the sun..."
 location_data = Vector2(0, 0)
 mystery_picture = ExtResource("2_lgub0")
 final_picture = ExtResource("1_drwo6")
+distance = "900m"
+minutes = "9 min"

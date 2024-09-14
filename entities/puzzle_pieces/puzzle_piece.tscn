@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn2owtjfmnf78"]
+
+[ext_resource type="Script" path="res://levels_game_scenes/Puzzle/PuzzlePart.gd" id="1_qlksa"]
+[ext_resource type="Texture2D" uid="uid://c6jdenck42ggo" path="res://entities/Card/card_assets/Skulptur Elefent V1.png" id="3_cm0b2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkehk"]
+size = Vector2(512, 512)
+
+[node name="Card" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_qlksa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vkehk")
+
+[node name="PieceImage" type="TextureRect" parent="."]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 1792.0
+offset_bottom = 1792.0
+scale = Vector2(0.25, 0.25)
+mouse_filter = 2
+texture = ExtResource("3_cm0b2")

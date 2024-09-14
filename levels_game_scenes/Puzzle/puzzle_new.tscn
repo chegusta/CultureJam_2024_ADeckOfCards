@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=3 uid="uid://dmnfdfs8ciyvp"]
+
+[ext_resource type="Texture2D" uid="uid://cjq3qmyike5ja" path="res://assets/GUI/pictures/B-Girls, Go! V1.png" id="1_0vlvh"]
+[ext_resource type="Script" path="res://levels_game_scenes/Puzzle/puzzle_new.gd" id="1_tscr5"]
+[ext_resource type="Texture2D" uid="uid://bkqqjahp6pmc1" path="res://assets/GUI/pictures/Part1.png" id="1_vrlfa"]
+[ext_resource type="Texture2D" uid="uid://dfl46mnux63fk" path="res://assets/GUI/pictures/Part2.png" id="2_4h764"]
+[ext_resource type="Texture2D" uid="uid://0h37hbi7j064" path="res://assets/GUI/deck_of_arts/03_BG.png" id="2_75nu7"]
+[ext_resource type="PackedScene" uid="uid://dn2owtjfmnf78" path="res://entities/puzzle_pieces/puzzle_piece.tscn" id="2_gnlt1"]
+[ext_resource type="Texture2D" uid="uid://bee1k8cciakr7" path="res://assets/GUI/pictures/Part3.png" id="3_fk3a8"]
+[ext_resource type="Texture2D" uid="uid://ci1mtd405glm8" path="res://assets/GUI/pictures/Part4.png" id="4_bov0t"]
+[ext_resource type="FontFile" uid="uid://ym2lcsxggcg8" path="res://common/fonts/Cornerstone_NOT_FREE.ttf" id="9_xjt1r"]
+
+[node name="Puzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_tscr5")
+
+[node name="03Bg" type="Sprite2D" parent="."]
+position = Vector2(360, 640)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("2_75nu7")
+
+[node name="B-girls,Go!V1" type="Sprite2D" parent="."]
+position = Vector2(360, 469)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_0vlvh")
+
+[node name="Target1" type="Node2D" parent="B-girls,Go!V1"]
+position = Vector2(-512, -512)
+
+[node name="Target2" type="Node2D" parent="B-girls,Go!V1"]
+position = Vector2(512, -512)
+
+[node name="Target3" type="Node2D" parent="B-girls,Go!V1"]
+position = Vector2(-512, 512)
+
+[node name="Target4" type="Node2D" parent="B-girls,Go!V1"]
+position = Vector2(512, 512)
+
+[node name="Card" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_gnlt1")]
+position = Vector2(536, 869)
+scale = Vector2(0.5, 0.5)
+target = NodePath("../B-girls,Go!V1/Target1")
+
+[node name="PieceImage" parent="Card" index="1"]
+texture = ExtResource("1_vrlfa")
+
+[node name="Card2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_gnlt1")]
+position = Vector2(535, 1142)
+scale = Vector2(0.5, 0.5)
+target = NodePath("../B-girls,Go!V1/Target2")
+
+[node name="PieceImage" parent="Card2" index="1"]
+texture = ExtResource("2_4h764")
+
+[node name="Card4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_gnlt1")]
+position = Vector2(197, 869)
+scale = Vector2(0.5, 0.5)
+target = NodePath("../B-girls,Go!V1/Target4")
+
+[node name="PieceImage" parent="Card4" index="1"]
+texture = ExtResource("3_fk3a8")
+
+[node name="Card3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_gnlt1")]
+position = Vector2(197, 1145)
+scale = Vector2(0.5, 0.5)
+target = NodePath("../B-girls,Go!V1/Target3")
+
+[node name="PieceImage" parent="Card3" index="1"]
+texture = ExtResource("4_bov0t")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 87.0
+offset_right = 681.0
+offset_bottom = 172.0
+theme_override_fonts/font = ExtResource("9_xjt1r")
+theme_override_font_sizes/font_size = 76
+text = "BUILD YOUR CARD"
+
+[editable path="Card"]
+[editable path="Card2"]
+[editable path="Card4"]
+[editable path="Card3"]

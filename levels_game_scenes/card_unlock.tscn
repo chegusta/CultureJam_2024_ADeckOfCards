@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://oggswr2lx2dl"]
+
+[ext_resource type="Texture2D" uid="uid://dc6sla8kmpxip" path="res://assets/GUI/card_unlock/B-Girls, Go! V1 BG.png" id="1_fhpo2"]
+[ext_resource type="Script" path="res://levels_game_scenes/card_unlock.gd" id="1_qhkno"]
+[ext_resource type="Texture2D" uid="uid://kiivhjr1fnt3" path="res://assets/GUI/card_unlock/B-Girls, Go! V2.png" id="2_kbgk1"]
+[ext_resource type="FontFile" uid="uid://ym2lcsxggcg8" path="res://common/fonts/Cornerstone_NOT_FREE.ttf" id="3_r44qi"]
+[ext_resource type="Texture2D" uid="uid://cwkrv3wvcbl4a" path="res://assets/GUI/swipe/tile_0030.png" id="4_fvee8"]
+[ext_resource type="Texture2D" uid="uid://kb5e4k5f4tct" path="res://assets/GUI/deck_of_arts/03_new route.png" id="5_e5mru"]
+[ext_resource type="Texture2D" uid="uid://bxci0j3xhee25" path="res://assets/GUI/deck_of_arts/03_Grid icon.png" id="6_63tc3"]
+[ext_resource type="Texture2D" uid="uid://d0x10pnim8u75" path="res://assets/GUI/card_unlock/Bildmaterial 92.png" id="7_3do3r"]
+[ext_resource type="Texture2D" uid="uid://bquqd1ijckt38" path="res://assets/GUI/card_unlock/Bildmaterial 93.png" id="8_riclt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qhkno")
+
+[node name="B-girls,Go!V1Bg" type="Sprite2D" parent="."]
+position = Vector2(360, 640)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("1_fhpo2")
+
+[node name="B-girls,Go!V2" type="Sprite2D" parent="."]
+position = Vector2(355, 604)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_kbgk1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 172.0
+offset_right = 540.0
+offset_bottom = 269.0
+theme_override_fonts/font = ExtResource("3_r44qi")
+theme_override_font_sizes/font_size = 86
+text = "B-GIRLS GO!"
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 51.0
+offset_right = 680.0
+offset_bottom = 123.0
+scale = Vector2(0.666, 0.666)
+icon = ExtResource("4_fvee8")
+
+[node name="NewRoute" type="Button" parent="."]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 1188.0
+offset_right = 793.0
+offset_bottom = 1261.0
+scale = Vector2(0.666, 0.666)
+icon = ExtResource("5_e5mru")
+
+[node name="Grid" type="Button" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 1191.0
+offset_right = 191.0
+offset_bottom = 1240.0
+icon = ExtResource("6_63tc3")
+
+[node name="Bildmaterial92" type="Sprite2D" parent="."]
+position = Vector2(81, 1120)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("7_3do3r")
+
+[node name="Bildmaterial93" type="Sprite2D" parent="."]
+position = Vector2(163, 1120)
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("8_riclt")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 921.0
+offset_right = 661.0
+offset_bottom = 1081.0
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_r44qi")
+theme_override_font_sizes/font_size = 20
+text = "B-Girls, GO! 2018
+An installation made by Maruša Sagadin
+
+Bought in the year 2023 by the Christine König Galerie.
+Sculpture made out of steal, wood and laquer
+Represents an oversized pink baseball cap
+that references Hip-Hop and street-Culture."
