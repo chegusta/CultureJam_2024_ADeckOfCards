@@ -27,7 +27,7 @@ color = Color(0.505344, 0.505344, 0.505344, 1)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NOPE"]
-position = Vector2(-185, 637.5)
+position = Vector2(-166, 637.5)
 shape = SubResource("RectangleShape2D_fa84t")
 
 [node name="YOPE" type="Area2D" parent="."]
@@ -35,7 +35,7 @@ position = Vector2(595, 0)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YOPE"]
-position = Vector2(301, 638)
+position = Vector2(271, 638)
 shape = SubResource("RectangleShape2D_l15ln")
 
 [connection signal="area_entered" from="NOPE" to="." method="_on_nope_area_entered"]

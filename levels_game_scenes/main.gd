@@ -1,7 +1,6 @@
 extends Node2D
 
 const CARD = preload("res://entities/Card/card.tscn")
-
 const CARD_ASSETS = [preload("res://entities/Card/testing/card1.tscn"), 
 preload("res://entities/Card/testing/card2.tscn"), 
 preload("res://entities/Card/testing/card3.tscn"),
@@ -13,10 +12,13 @@ preload("res://entities/Card/testing/card5.tscn")]
 
 var original_position : Vector2
 var card_stack : Array
+var yes_stack : Array
+var current_card
+
 var on_yes : bool = false
 var on_no : bool = false
+var to_yes_stack : bool = false
 var choice_active : bool
-var current_card
 
 
 
@@ -38,6 +40,7 @@ func _ready() -> void:
 	fetch_new_card()
 	
 	EventBus.on_card_released.connect(handle_released_card)
+	EventBus.on_card_removed.connect(add_card_to_yes_stack)
 	EventBus.on_card_removed.connect(fetch_new_card)
 
 func _on_yope_area_entered(area: Area2D) -> void:
@@ -63,6 +66,8 @@ func _on_nope_area_exited(area: Area2D) -> void:
 func handle_released_card():
 	if on_yes and choice_active: 
 		current_card.move_to_off_screen(Vector2(2000, 690))
+		# adding card to yes-stack...
+		to_yes_stack = true
 	elif !on_yes and !choice_active: 
 		current_card.snap_back_animation()
 		return
@@ -90,6 +95,13 @@ func create_card_deck():
 
 func fetch_new_card():
 	if card_stack.size() < 1:
+		for i in yes_stack.size():
+			print(yes_stack[i])
 		return
 	current_card = card_stack.pop_front() #take uppermost card and assigned it as the current card
 	current_card.input_pickable = true #make it piackable/movable by mouse
+
+func add_card_to_yes_stack():
+	if to_yes_stack:
+		yes_stack.append(current_card.card_resource.location_data)
+		to_yes_stack = false

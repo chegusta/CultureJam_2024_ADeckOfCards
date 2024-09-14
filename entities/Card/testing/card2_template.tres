@@ -4,4 +4,6 @@
 
 [resource]
 script = ExtResource("1_24ken")
+art_name = "CARD 2"
 description_text = "This is the text for card 2. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+location_data = Vector2(0, 0)
