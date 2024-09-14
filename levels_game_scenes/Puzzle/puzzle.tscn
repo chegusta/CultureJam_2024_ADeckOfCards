@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7o5aumnk3qlf"]
+
+[ext_resource type="PackedScene" uid="uid://eucyjqnqg87u" path="res://levels_game_scenes/Puzzle/texture_rect.tscn" id="1_0oem6"]
+[ext_resource type="Texture2D" uid="uid://bejls3evu302p" path="res://pictures/trialimage.png" id="2_tbmy8"]
+
+[node name="Puzzle" type="Node2D"]
+
+[node name="TextureRect" parent="." instance=ExtResource("1_0oem6")]
+offset_left = 65.0
+offset_top = 255.0
+offset_right = 245.0
+offset_bottom = 416.0
+texture = ExtResource("2_tbmy8")
+
+[node name="TextureRect2" parent="." instance=ExtResource("1_0oem6")]
+offset_left = 349.0
+offset_top = 181.0
+offset_right = 512.0
+offset_bottom = 358.0
