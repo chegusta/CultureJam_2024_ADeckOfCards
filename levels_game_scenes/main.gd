@@ -20,6 +20,7 @@ var on_no : bool = false
 var to_yes_stack : bool = false
 var choice_active : bool
 
+@onready var return_button: Button = $ReturnButton
 
 
 func _ready() -> void:
@@ -31,6 +32,7 @@ func _ready() -> void:
 	EventBus.on_card_released.connect(handle_released_card)
 	EventBus.on_card_removed.connect(add_card_to_yes_stack)
 	EventBus.on_card_removed.connect(fetch_new_card)
+	return_button.pressed.connect(func(): SceneManager.change_scene("res://levels_game_scenes/main_menu.tscn", { "pattern": "curtains", "color": Color("da3831") }))
 
 func _on_yope_area_entered(area: Area2D) -> void:
 	color_rect.color = Color.GREEN;
