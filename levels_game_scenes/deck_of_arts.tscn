@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://oxwuywwu17bc"]
+
+[ext_resource type="Script" path="res://levels_game_scenes/deck_of_arts.gd" id="1_5o0ex"]
+[ext_resource type="Script" path="res://levels_game_scenes/grid_view.gd" id="3_a0ghx"]
+
+[sub_resource type="Gradient" id="Gradient_6a058"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8j74t"]
+gradient = SubResource("Gradient_6a058")
+
+[node name="DeckOfArts" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_5o0ex")
+
+[node name="GridView" type="TextureRect" parent="."]
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -720.0
+offset_right = -720.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = SubResource("GradientTexture1D_8j74t")
+script = ExtResource("3_a0ghx")
+
+[node name="DeckView" type="Button" parent="GridView"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -72.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 46
+text = "DECK VIEW"
+
+[node name="BackToMain" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 36
+text = "BACK TO MAIN MENU"
+
+[node name="GridButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -85.0
+offset_right = 293.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 56
+text = "GRID VIEW"
