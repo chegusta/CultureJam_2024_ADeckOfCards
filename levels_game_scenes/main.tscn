@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbl4eji3mbyxv"]
+[gd_scene load_steps=13 format=3 uid="uid://dbl4eji3mbyxv"]
 
 [ext_resource type="Script" path="res://levels_game_scenes/main.gd" id="1_7tdgk"]
 [ext_resource type="Texture2D" uid="uid://cwkrv3wvcbl4a" path="res://assets/GUI/swipe/tile_0030.png" id="2_kn5f6"]
+[ext_resource type="StyleBox" uid="uid://cbf4grt4t42sg" path="res://Styling/new_style_box_bigger.tres" id="2_pyopq"]
 [ext_resource type="Texture2D" uid="uid://b8a2he7tmth4k" path="res://assets/GUI/swipe/new/05_BG X.png" id="3_jkhnl"]
 [ext_resource type="FontFile" uid="uid://ym2lcsxggcg8" path="res://common/fonts/Cornerstone_NOT_FREE.ttf" id="4_ia2dj"]
 [ext_resource type="Texture2D" uid="uid://d0au43ha5x2ba" path="res://assets/GUI/swipe/new/组 6 拷贝.png" id="5_fs7s6"]
@@ -13,6 +14,10 @@ size = Vector2(21, 1295)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l15ln"]
 size = Vector2(20, 1293)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47jse"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ibyek"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_7tdgk")
@@ -51,6 +56,17 @@ offset_right = 674.0
 offset_bottom = 152.0
 scale = Vector2(0.666, 0.666)
 theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/pressed_mirrored = ExtResource("2_pyopq")
+theme_override_styles/pressed = ExtResource("2_pyopq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_47jse")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_47jse")
 icon = ExtResource("2_kn5f6")
 
 [node name="05Preview" type="Sprite2D" parent="."]
@@ -101,6 +117,17 @@ offset_left = 234.0
 offset_top = 1367.0
 offset_right = 690.0
 offset_bottom = 1431.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/pressed_mirrored = ExtResource("2_pyopq")
+theme_override_styles/pressed = ExtResource("2_pyopq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ibyek")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ibyek")
 icon = ExtResource("6_jwtqd")
 script = ExtResource("6_ad7pb")
 

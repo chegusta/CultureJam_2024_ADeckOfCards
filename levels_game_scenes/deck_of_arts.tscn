@@ -1,13 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://oxwuywwu17bc"]
+[gd_scene load_steps=14 format=3 uid="uid://oxwuywwu17bc"]
 
 [ext_resource type="Script" path="res://levels_game_scenes/deck_of_arts.gd" id="1_5o0ex"]
+[ext_resource type="Texture2D" uid="uid://ba84iyb0dv7gp" path="res://assets/GUI/swipe/new/1080x1920 拷贝 13.png" id="2_fv5cu"]
 [ext_resource type="Texture2D" uid="uid://cdsyjjw2304gj" path="res://assets/GUI/deck_of_arts/04_preview pop up grid.png" id="2_y3twu"]
 [ext_resource type="Script" path="res://levels_game_scenes/grid_view.gd" id="3_a0ghx"]
 [ext_resource type="Texture2D" uid="uid://0h37hbi7j064" path="res://assets/GUI/deck_of_arts/03_BG.png" id="4_0wvoe"]
 [ext_resource type="Texture2D" uid="uid://bxci0j3xhee25" path="res://assets/GUI/deck_of_arts/03_Grid icon.png" id="4_mw1v4"]
 [ext_resource type="Texture2D" uid="uid://bwd017qtrn448" path="res://assets/GUI/deck_of_arts/03_X icon.png" id="4_rsv7c"]
+[ext_resource type="StyleBox" uid="uid://cbf4grt4t42sg" path="res://Styling/new_style_box_bigger.tres" id="5_43ng3"]
 [ext_resource type="Texture2D" uid="uid://kb5e4k5f4tct" path="res://assets/GUI/deck_of_arts/03_new route.png" id="6_fkf3p"]
 [ext_resource type="Texture2D" uid="uid://c38ed2328w23g" path="res://assets/GUI/deck_of_arts/03_Text myDeck.png" id="7_cebgb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ccspm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5gn85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yd4mq"]
 
 [node name="DeckOfArts" type="Control"]
 layout_mode = 3
@@ -32,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.666, 0.666)
 mouse_filter = 0
-texture = ExtResource("2_y3twu")
+texture = ExtResource("2_fv5cu")
 script = ExtResource("3_a0ghx")
 
 [node name="DeckView" type="Button" parent="GridView"]
@@ -50,6 +58,7 @@ theme_override_font_sizes/font_size = 46
 text = "DECK VIEW"
 
 [node name="TextureRect" type="TextureRect" parent="GridView"]
+visible = false
 self_modulate = Color(0, 0, 0, 1)
 z_index = -5
 layout_mode = 0
@@ -67,6 +76,17 @@ offset_right = 671.0
 offset_bottom = 136.0
 scale = Vector2(0.666, 0.666)
 theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/pressed_mirrored = ExtResource("5_43ng3")
+theme_override_styles/pressed = ExtResource("5_43ng3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ccspm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ccspm")
 icon = ExtResource("4_rsv7c")
 
 [node name="GridButton" type="Button" parent="."]
@@ -80,6 +100,17 @@ offset_right = 167.0
 offset_bottom = -45.0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/pressed_mirrored = ExtResource("5_43ng3")
+theme_override_styles/pressed = ExtResource("5_43ng3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5gn85")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5gn85")
 icon = ExtResource("4_mw1v4")
 
 [node name="NewRoute" type="Button" parent="."]
@@ -89,6 +120,17 @@ offset_top = 1160.0
 offset_right = 797.0
 offset_bottom = 1233.0
 scale = Vector2(0.666, 0.666)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/pressed_mirrored = ExtResource("5_43ng3")
+theme_override_styles/pressed = ExtResource("5_43ng3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_yd4mq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yd4mq")
 icon = ExtResource("6_fkf3p")
 
 [node name="Background" type="TextureRect" parent="."]
