@@ -1,19 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7o5aumnk3qlf"]
+[gd_scene load_steps=9 format=3 uid="uid://c7o5aumnk3qlf"]
 
 [ext_resource type="PackedScene" uid="uid://eucyjqnqg87u" path="res://levels_game_scenes/Puzzle/texture_rect.tscn" id="1_0oem6"]
-[ext_resource type="Texture2D" uid="uid://bejls3evu302p" path="res://pictures/trialimage.png" id="2_tbmy8"]
+[ext_resource type="Script" path="res://levels_game_scenes/Puzzle/puzzle.gd" id="1_ay28h"]
+[ext_resource type="Texture2D" uid="uid://cjq3qmyike5ja" path="res://pictures/B-Girls, Go! V1.png" id="1_c5tcm"]
+[ext_resource type="Texture2D" uid="uid://bkqqjahp6pmc1" path="res://pictures/Part1.png" id="3_r53no"]
+[ext_resource type="Texture2D" uid="uid://bee1k8cciakr7" path="res://pictures/Part3.png" id="4_5y0g6"]
+[ext_resource type="Texture2D" uid="uid://ci1mtd405glm8" path="res://pictures/Part4.png" id="5_jiomt"]
+[ext_resource type="Texture2D" uid="uid://dfl46mnux63fk" path="res://pictures/Part2.png" id="6_hi23c"]
+[ext_resource type="PackedScene" uid="uid://5xo3epr801wa" path="res://levels_game_scenes/Puzzle/target_rect.tscn" id="7_sgkj2"]
 
 [node name="Puzzle" type="Node2D"]
+script = ExtResource("1_ay28h")
 
-[node name="TextureRect" parent="." instance=ExtResource("1_0oem6")]
-offset_left = 65.0
-offset_top = 255.0
-offset_right = 245.0
-offset_bottom = 416.0
-texture = ExtResource("2_tbmy8")
+[node name="B-girls,Go!V1" type="Sprite2D" parent="."]
+position = Vector2(346, 346)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_c5tcm")
 
-[node name="TextureRect2" parent="." instance=ExtResource("1_0oem6")]
+[node name="TextureRect5" parent="." node_paths=PackedStringArray("correct_target") instance=ExtResource("1_0oem6")]
 offset_left = 349.0
-offset_top = 181.0
-offset_right = 512.0
-offset_bottom = 358.0
+offset_top = 662.0
+offset_right = 649.0
+offset_bottom = 962.0
+texture = ExtResource("3_r53no")
+correct_target = NodePath("../TargetRect")
+
+[node name="TextureRect6" parent="." node_paths=PackedStringArray("correct_target") instance=ExtResource("1_0oem6")]
+offset_left = 43.0
+offset_top = 662.0
+offset_right = 343.0
+offset_bottom = 962.0
+texture = ExtResource("4_5y0g6")
+correct_target = NodePath("../TargetRect4")
+
+[node name="TextureRect7" parent="." instance=ExtResource("1_0oem6")]
+offset_left = 348.0
+offset_top = 964.0
+offset_right = 648.0
+offset_bottom = 1264.0
+texture = ExtResource("5_jiomt")
+
+[node name="TextureRect8" parent="." instance=ExtResource("1_0oem6")]
+offset_left = 41.0
+offset_top = 966.0
+offset_right = 341.0
+offset_bottom = 1266.0
+texture = ExtResource("6_hi23c")
+
+[node name="TargetRect" parent="." node_paths=PackedStringArray("correct_piece") instance=ExtResource("7_sgkj2")]
+offset_left = 48.0
+offset_top = 44.0
+offset_right = 348.0
+offset_bottom = 344.0
+correct_piece = NodePath("../TextureRect5")
+
+[node name="TargetRect2" parent="." instance=ExtResource("7_sgkj2")]
+offset_left = 344.0
+offset_top = 44.0
+offset_right = 644.0
+offset_bottom = 344.0
+
+[node name="TargetRect3" parent="." instance=ExtResource("7_sgkj2")]
+offset_left = 47.0
+offset_top = 350.0
+offset_right = 347.0
+offset_bottom = 650.0
+
+[node name="TargetRect4" parent="." node_paths=PackedStringArray("correct_piece") instance=ExtResource("7_sgkj2")]
+offset_left = 346.0
+offset_top = 346.0
+offset_right = 646.0
+offset_bottom = 646.0
+correct_piece = NodePath("../TextureRect6")
