@@ -3,8 +3,12 @@ extends Area2D
 var mouse_inside : bool
 var tweener : Tween
 
+@onready var label: Label = $Label
+@export var card_resource : Resource
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	label.text = card_resource.description_text
 	mouse_entered.connect(func(): mouse_inside = true)
 	mouse_exited.connect(func(): mouse_inside = false)
 

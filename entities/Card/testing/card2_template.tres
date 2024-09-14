@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CardTemplate" load_steps=2 format=3 uid="uid://c7m760fkqpll3"]
+
+[ext_resource type="Script" path="res://entities/Card/card_template.gd" id="1_24ken"]
+
+[resource]
+script = ExtResource("1_24ken")
+description_text = "This is the text for card 2. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
