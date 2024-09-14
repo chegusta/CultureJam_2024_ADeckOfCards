@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardTemplate" load_steps=4 format=3 uid="uid://c7m760fkqpll3"]
+
+[ext_resource type="Texture2D" uid="uid://c6asymfk8m3q0" path="res://entities/Card/card_assets/Home Stories V2.png" id="1_3hivh"]
+[ext_resource type="Texture2D" uid="uid://dejf4xahu2xch" path="res://entities/Card/card_assets/Home Stories V1.png" id="2_efuh6"]
+[ext_resource type="Script" path="res://entities/Card/card_template.gd" id="3_wnmuy"]
+
+[resource]
+script = ExtResource("3_wnmuy")
+art_name = "HOME STORIES"
+artist_name = "Künstler:in"
+description_text = "This is the text for card 2. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+location_data = Vector2(0, 0)
+mystery_picture = ExtResource("2_efuh6")
+final_picture = ExtResource("1_3hivh")

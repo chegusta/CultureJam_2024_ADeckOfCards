@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardTemplate" load_steps=4 format=3 uid="uid://dooin1i0aqwue"]
+
+[ext_resource type="Texture2D" uid="uid://gbdnacagr6vj" path="res://entities/Card/card_assets/Winduhr oder Das Leben ein Hauch V2.png" id="1_3y6cx"]
+[ext_resource type="Texture2D" uid="uid://00d2h5tgq0ti" path="res://entities/Card/card_assets/Winduhr oder Das Leben ein Hauch V1.png" id="2_wakd3"]
+[ext_resource type="Script" path="res://entities/Card/card_template.gd" id="3_3ju1f"]
+
+[resource]
+script = ExtResource("3_3ju1f")
+art_name = "WINDUR ODER DAS LEBEN EIN HAUCH"
+artist_name = "KÜNSTLI"
+description_text = "This is the text for card 4. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+location_data = Vector2(0, 0)
+mystery_picture = ExtResource("2_wakd3")
+final_picture = ExtResource("1_3y6cx")
