@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwefw7eqweeu5"]
+[gd_scene load_steps=6 format=3 uid="uid://dwefw7eqweeu5"]
 
 [ext_resource type="Script" path="res://entities/Card/card.gd" id="1_e20uv"]
-[ext_resource type="Resource" uid="uid://dh2rydnygxly6" path="res://entities/Card/testing/Card_1_template.tres" id="2_ebnrd"]
+[ext_resource type="Resource" uid="uid://dh2rydnygxly6" path="res://entities/Card/card_assets/Card1_template.tres" id="2_ebnrd"]
 [ext_resource type="FontFile" uid="uid://ym2lcsxggcg8" path="res://common/fonts/Cornerstone_NOT_FREE.ttf" id="2_q8745"]
+[ext_resource type="Texture2D" uid="uid://c6jdenck42ggo" path="res://entities/Card/card_assets/Skulptur Elefent V1.png" id="4_l3qe5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkehk"]
 size = Vector2(512, 512)
@@ -23,7 +24,16 @@ offset_bottom = 256.0
 mouse_filter = 2
 color = Color(0.344076, 0.344076, 0.344076, 1)
 
+[node name="MysteryImage" type="TextureRect" parent="."]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 1792.0
+offset_bottom = 1792.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_l3qe5")
+
 [node name="Label" type="Label" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = -239.0
 offset_top = -236.0
 offset_right = 233.0
@@ -32,3 +42,6 @@ theme_override_fonts/font = ExtResource("2_q8745")
 theme_override_font_sizes/font_size = 32
 text = "THIS IS AN EXAMPLE TEXT. THIS ART PIECE IS BY BLONGIAN HEIR-HORTEN."
 autowrap_mode = 3
+
+[node name="FadeTimer" type="Timer" parent="."]
+one_shot = true

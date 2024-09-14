@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardTemplate" load_steps=4 format=3 uid="uid://dh2rydnygxly6"]
+
+[ext_resource type="Script" path="res://entities/Card/card_template.gd" id="1_5g38e"]
+[ext_resource type="Texture2D" uid="uid://d3a56fan5mb0y" path="res://entities/Card/card_assets/Skulptur Elefent V2.png" id="1_wg2ur"]
+[ext_resource type="Texture2D" uid="uid://c6jdenck42ggo" path="res://entities/Card/card_assets/Skulptur Elefent V1.png" id="2_ptfxb"]
+
+[resource]
+script = ExtResource("1_5g38e")
+art_name = "Skulptur Elefant"
+artist_name = "Unknown"
+description_text = "This is the text for card 1. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+location_data = Vector2(0, 0)
+mystery_picture = ExtResource("2_ptfxb")
+final_picture = ExtResource("1_wg2ur")

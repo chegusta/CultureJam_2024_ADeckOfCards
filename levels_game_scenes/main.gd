@@ -1,11 +1,11 @@
 extends Node2D
 
 const CARD = preload("res://entities/Card/card.tscn")
-const CARD_ASSETS = [preload("res://entities/Card/testing/card1.tscn"), 
-preload("res://entities/Card/testing/card2.tscn"), 
-preload("res://entities/Card/testing/card3.tscn"),
-preload("res://entities/Card/testing/card4.tscn"),
-preload("res://entities/Card/testing/card5.tscn")]
+const CARD_ASSETS = [preload("res://entities/Card/card_assets/card1.tscn"), 
+preload("res://entities/Card/card_assets/card2.tscn"), 
+preload("res://entities/Card/card_assets/card3.tscn"),
+preload("res://entities/Card/card_assets/card4.tscn"),
+preload("res://entities/Card/card_assets/card5.tscn")]
 
 @onready var color_rect: ColorRect = $ColorRect
 
@@ -24,18 +24,7 @@ var choice_active : bool
 
 func _ready() -> void:
 	##TO DO: in final version take array of cards and shuffle it before assigning Z-values OR spawn ONE card and another behind it.
-	#for i in 5:
-		#var c = CARD.instantiate()
-		#c.global_position = get_viewport_rect().size / 2
-		#add_child(c)
-		#c.z_index = -i
-		#c.input_pickable = false
-		#card_stack.append(c)
-	#
-	#card_stack.shuffle()
-	
 	create_card_deck()
-	
 	original_position = get_viewport_rect().size / 2
 	fetch_new_card()
 	
@@ -91,7 +80,6 @@ func create_card_deck():
 	#fix z-ordering of cards
 	for i in card_stack.size():
 		card_stack[i].z_index = -i
-	
 
 func fetch_new_card():
 	if card_stack.size() < 1:
@@ -100,6 +88,7 @@ func fetch_new_card():
 		return
 	current_card = card_stack.pop_front() #take uppermost card and assigned it as the current card
 	current_card.input_pickable = true #make it piackable/movable by mouse
+	current_card.fade_timer.start()
 
 func add_card_to_yes_stack():
 	if to_yes_stack:
