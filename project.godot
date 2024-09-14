@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="CultureJam2024"
-run/main_scene="res://levels_game_scenes/main.tscn"
+run/main_scene="res://levels_game_scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 EventBus="*res://common/event_bus.gd"
+SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 
 [display]
 
@@ -25,6 +26,10 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
 
 [file_customization]
 

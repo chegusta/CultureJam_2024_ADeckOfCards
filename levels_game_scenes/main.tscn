@@ -38,6 +38,14 @@ collision_mask = 2
 position = Vector2(271, 638)
 shape = SubResource("RectangleShape2D_l15ln")
 
+[node name="ReturnButton" type="Button" parent="."]
+offset_left = 6.0
+offset_top = 1217.0
+offset_right = 437.0
+offset_bottom = 1275.0
+theme_override_font_sizes/font_size = 36
+text = "RETURN TO MAIN MENU"
+
 [connection signal="area_entered" from="NOPE" to="." method="_on_nope_area_entered"]
 [connection signal="area_exited" from="NOPE" to="." method="_on_nope_area_exited"]
 [connection signal="area_entered" from="YOPE" to="." method="_on_yope_area_entered"]

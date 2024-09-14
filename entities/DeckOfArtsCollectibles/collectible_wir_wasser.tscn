@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgddn1k2tia08"]
+
+[ext_resource type="PackedScene" uid="uid://bxhmahei2f86l" path="res://entities/DeckOfArtsCollectibles/card_collectible.tscn" id="1_uxr8j"]
+
+[node name="Card" instance=ExtResource("1_uxr8j")]
