@@ -8,7 +8,7 @@
 script = ExtResource("3_rw484")
 art_name = "B-GIRLS"
 artist_name = "Künstlerin"
-description_text = "This is the text for card 3. Lorem ipsum und so weiter. Vater unser im Himmel geheiligt werde dein Name"
+description_text = "B-Girls, GO! Is an installation that was made by Maruša Sagadin in the year 2018 and bought in the year 2023 by the Christine König Galerie.The sculpture made out of steal, wood and laquer represents an oversized pink baseball cap that references Hip-Hop and street-Culture."
 location_data = Vector2(0, 0)
 mystery_picture = ExtResource("2_lgub0")
 final_picture = ExtResource("1_drwo6")
