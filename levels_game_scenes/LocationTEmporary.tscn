@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ifcmwu4jdg6x"]
+[gd_scene load_steps=4 format=3 uid="uid://ifcmwu4jdg6x"]
 
 [ext_resource type="Script" path="res://levels_game_scenes/location_t_emporary.gd" id="1_bny4q"]
 [ext_resource type="Texture2D" uid="uid://mar338raun24" path="res://assets/GUI/02_preview.png" id="2_a8plq"]
+[ext_resource type="PackedScene" uid="uid://ba3hi21nftki2" path="res://entities/loading_circle.tscn" id="3_ga4jh"]
 
 [node name="LocationTemporary" type="Control"]
 layout_mode = 3
@@ -22,8 +23,9 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+[node name="LoadingCircle" parent="." instance=ExtResource("3_ga4jh")]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-fill_mode = 4
+offset_left = 298.0
+offset_top = 761.0
+offset_right = 426.0
+offset_bottom = 889.0

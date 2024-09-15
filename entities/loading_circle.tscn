@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba3hi21nftki2"]
+
+[ext_resource type="Texture2D" uid="uid://cl61cwv5w30e4" path="res://assets/GUI/loadingScircle.png" id="1_jk2n0"]
+[ext_resource type="Script" path="res://levels_game_scenes/loading_circle.gd" id="2_kcef1"]
+
+[node name="LoadingCircle" type="TextureProgressBar"]
+offset_right = 128.0
+offset_bottom = 128.0
+pivot_offset = Vector2(64, 64)
+value = 80.0
+fill_mode = 4
+radial_fill_degrees = 106.7
+texture_progress = ExtResource("1_jk2n0")
+script = ExtResource("2_kcef1")

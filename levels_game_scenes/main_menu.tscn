@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://btpdrpav1ap1j"]
 
 [ext_resource type="Script" path="res://levels_game_scenes/main_menu.gd" id="1_hscfl"]
-[ext_resource type="Texture2D" uid="uid://c6oxg6vht5cpm" path="res://assets/GUI/01_BG X.png" id="2_klc00"]
+[ext_resource type="Texture2D" uid="uid://0mgqiw0frbsl" path="res://assets/GUI/01_BG XXXXXXXX.png" id="2_uu3te"]
 [ext_resource type="Texture2D" uid="uid://pvlklpvoyq1r" path="res://assets/GUI/01_element1.png" id="4_rr37t"]
 [ext_resource type="Texture2D" uid="uid://b53qv5dnbmwtv" path="res://assets/GUI/01_Icon1.png" id="5_jc7vg"]
 [ext_resource type="StyleBox" uid="uid://cbf4grt4t42sg" path="res://Styling/new_style_box_bigger.tres" id="5_s75nx"]
@@ -24,7 +24,7 @@ script = ExtResource("1_hscfl")
 modulate = Color(1, 1, 1, 0.988235)
 position = Vector2(360, 640)
 scale = Vector2(0.666, 0.666)
-texture = ExtResource("2_klc00")
+texture = ExtResource("2_uu3te")
 
 [node name="01Element1" type="Sprite2D" parent="."]
 position = Vector2(585, 1224)

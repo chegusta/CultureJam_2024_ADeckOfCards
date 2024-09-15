@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dngcnn320xh7u"]
+
+[ext_resource type="PackedScene" uid="uid://bxhmahei2f86l" path="res://entities/DeckOfArtsCollectibles/card_collectible.tscn" id="1_q43by"]
+[ext_resource type="Resource" uid="uid://n0asoufj3ugd" path="res://entities/Card/card_assets/card3_template.tres" id="2_q2rwv"]
+
+[node name="Card" instance=ExtResource("1_q43by")]
+card_resource = ExtResource("2_q2rwv")

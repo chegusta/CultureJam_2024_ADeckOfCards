@@ -4,11 +4,12 @@ extends Control
 @onready var grid_button: Button = $GridButton
 @onready var deck_view: Button = $GridView/DeckView
 @onready var grid_view: TextureRect = $GridView
+@onready var new_route: Button = $NewRoute
 
 const CARD = preload("res://entities/Card/card.tscn")
-const CARD_ASSETS = [preload("res://entities/DeckOfArtsCollectibles/collectible_winduhr.tscn"), 
-preload("res://entities/DeckOfArtsCollectibles/collectible_wir_wasser.tscn")]
-
+const CARD_ASSETS = [preload("res://entities/DeckOfArtsCollectibles/bgirlsgo.tscn"),
+	preload("res://entities/DeckOfArtsCollectibles/collectible_winduhr.tscn"), 
+	preload("res://entities/DeckOfArtsCollectibles/collectible_wir_wasser.tscn")]
 
 var original_position : Vector2
 var card_stack : Array
@@ -28,6 +29,7 @@ func _ready() -> void:
 	back_to_main.pressed.connect(return_to_main_menu)
 	grid_button.pressed.connect(func(): grid_view.move_grid_view(Vector2(0, 0)))
 	deck_view.pressed.connect(func(): grid_view.move_grid_view(Vector2(-750, 0)))
+	new_route.pressed.connect(func(): SceneManager.change_scene("res://levels_game_scenes/LocationTEmporary.tscn", { "pattern": "curtains", "color": Color("da3831") }))
 
 	create_card_deck()
 	original_position = get_viewport_rect().size / 2

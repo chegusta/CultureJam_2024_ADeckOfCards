@@ -30,15 +30,15 @@ var choice_active : bool
 
 func _ready() -> void:
 	##TO DO: in final version take array of cards and shuffle it before assigning Z-values OR spawn ONE card and another behind it.
+	original_position = Vector2(360, 655)
 	create_card_deck()
-	original_position = get_viewport_rect().size / 2
 	fetch_new_card()
 	
 	EventBus.on_card_released.connect(handle_released_card)
 	EventBus.on_card_removed.connect(add_card_to_yes_stack)
 	EventBus.on_card_removed.connect(fetch_new_card)
 	return_button.pressed.connect(func(): SceneManager.change_scene("res://levels_game_scenes/main_menu.tscn", { "pattern": "curtains", "color": Color("da3831") }))
-	ready_2_go.pressed.connect(func(): SceneManager.change_scene("res://levels_game_scenes/Puzzle/puzzle_new.tscn", { "pattern": "curtains", "color": Color("da3831") }))
+	ready_2_go.pressed.connect(func(): SceneManager.change_scene("res://levels_game_scenes/map.tscn", { "pattern": "curtains", "color": Color("da3831") }))
 
 func _on_yope_area_entered(area: Area2D) -> void:
 	color_rect.color = Color.GREEN;
@@ -78,13 +78,12 @@ func create_card_deck():
 	for i in CARD_ASSETS.size():
 		#instantiate assets from stack, assign screen center, make them ignore input and append to card stack array
 		var c = CARD_ASSETS[i].instantiate()
-		c.global_position = get_viewport_rect().size / 2
+		c.global_position = original_position
 		add_child(c)
 		c.input_pickable = false
 		card_stack.append(c)
 	
 	card_stack.shuffle()
-	
 	#fix z-ordering of cards
 	for i in card_stack.size():
 		card_stack[i].z_index = -i
@@ -95,7 +94,6 @@ func fetch_new_card():
 			print(yes_stack[i])
 			time_dynamic.text = ""
 			distance_dynamic.text = ""
-			ready_2_go.button_appear()
 		return
 	current_card = card_stack.pop_front() #take uppermost card and assigned it as the current card
 	update_labels()
@@ -106,6 +104,8 @@ func add_card_to_yes_stack():
 	if to_yes_stack:
 		yes_stack.append(current_card.card_resource.location_data)
 		to_yes_stack = false
+	if yes_stack.size() == 1:
+		ready_2_go.button_appear()
 
 func update_labels():
 	time_dynamic.text = current_card.card_resource.minutes

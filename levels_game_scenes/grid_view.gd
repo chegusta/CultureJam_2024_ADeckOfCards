@@ -2,6 +2,11 @@ extends TextureRect
 
 var tweener: Tween
 
+@onready var go_to_card: Button = $GoToCard
+
+func _ready() -> void:
+	go_to_card.pressed.connect(func(): SceneManager.change_scene("res://levels_game_scenes/card_unlock.tscn", { "pattern": "curtains", "color": Color("da3831") }))
+
 func move_grid_view(final_position):
 	if tweener:
 		tweener.kill()
